@@ -1,7 +1,11 @@
-init:
-    pip install -r requirements.txt
+init: requirements.txt
+	test -d venv || virtualenv -p python3 venv
+	. venv/bin/activate; pip install -Ur requirements.txt
+	touch venv/bin/activate
 
 test:
-    py.test tests
+	. venv/bin/activate; py.test project/tests
 
-.PHONY: init test
+clean:
+	rm -rf venv
+	find -iname "*.pyc" -delete

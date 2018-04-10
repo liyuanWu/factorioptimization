@@ -57,3 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+#virtual environment for python
+venv
+
+#py.test cache
+.pytest_cache
+
+#python cache
+*__pycache__/
