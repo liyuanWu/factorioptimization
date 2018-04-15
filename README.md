@@ -2,7 +2,7 @@
 help calculate optimization producing/consuming ratio and corresponding layout
 
 ## Major Distributor
-* Chenlin
+* @chenlinwang
 * @liyuanWu
 
 ## Quick Start

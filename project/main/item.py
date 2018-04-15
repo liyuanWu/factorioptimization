@@ -6,6 +6,7 @@ class BaseItem(object):
     def __init__(self,json):
         self._json = json
         self.name = json[itemMetaConfig.ITEM_NAME]
+        self._className = 'BaseItem'
 
     def getFieldWithKeys(self,keys=()):
         """
@@ -21,7 +22,7 @@ class BaseItem(object):
         return currentField
     
     def __str__(self):
-        return '<BaseItem:{}>'.format(self.name)
+        return '<{}:{}>'.format(self._className,self.name)
 
     def __repr__(self):
         return self.__str__()
@@ -31,6 +32,7 @@ class Item(BaseItem):
     def __init__(self,json):
         super().__init__(json)
         self.type = json[itemMetaConfig.ITEM_PROTOTYPE]
+        self._className = 'Item'
 
 class BaseFactory(object):
     def __init__(self,loadDir,itemClass = BaseItem):

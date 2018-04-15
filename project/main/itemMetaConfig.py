@@ -1,3 +1,5 @@
+import os
+
 ITEM_NAME = 'name'
 ITEM_RECIPE = 'recipe'
 ITEM_RECIPE_NORMAL = 'normal'
@@ -23,7 +25,7 @@ ITEM_OTHER_COMMENT = 'comment'
 TECH_UPGRADE_LIST = 'upgrade'
 TECH_VERSION = 'version'
 
-ITEM_JSON_DIRECTORY = r'..\json\item'
-TECH_JSON_DIRECTORY = r'..\json\tech'
+ITEM_JSON_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__), r'..\json\item'))
+TECH_JSON_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__), r'..\json\tech'))
 
 ITEM_PROTOTYPE = 'Prototype type'
