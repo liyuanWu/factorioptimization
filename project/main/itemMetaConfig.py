@@ -25,3 +25,5 @@ TECH_VERSION = 'version'
 
 ITEM_JSON_DIRECTORY = r'..\json\item'
 TECH_JSON_DIRECTORY = r'..\json\tech'
+
+ITEM_PROTOTYPE = 'Prototype type'

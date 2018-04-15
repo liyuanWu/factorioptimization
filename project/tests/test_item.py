@@ -10,6 +10,7 @@ class itemTest(unittest.TestCase):
     def test_load_item(self):
         itemFactory = ItemFactory()
         self.assertNotEqual(len(itemFactory),0)
+        self.assertEqual(len(itemFactory.getItemWithType('assembling-machine')),6)
 
         accumulator_name = 'Accumulator'
         accumulator = itemFactory.getItem(accumulator_name)
